@@ -10,7 +10,7 @@ import os
 db = SQLAlchemy()
 migrate = Migrate()
 jwt = JWTManager()
-socketio = SocketIO(cors_allowed_origins="*")
+socketio = SocketIO(cors_allowed_origins="*", async_mode="gevent")
 
 def create_app(config_name=None):
     app = Flask(__name__)
