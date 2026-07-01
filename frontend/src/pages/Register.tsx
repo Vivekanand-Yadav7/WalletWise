@@ -152,7 +152,7 @@ const Register = () => {
               disabled={isLoading}
             />
             <label htmlFor="agree-terms" className="ml-2 block text-sm text-gray-300">
-              I agree to the <a href="#" className="text-blue-500 hover:text-blue-400">Terms of Service</a> and <a href="#" className="text-blue-500 hover:text-blue-400">Privacy Policy</a>
+              I agree to the <a href="#terms" className="text-blue-500 hover:text-blue-400">Terms of Service</a> and <a href="#privacy" className="text-blue-500 hover:text-blue-400">Privacy Policy</a>
             </label>
           </div>
 
