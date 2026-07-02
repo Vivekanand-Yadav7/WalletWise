@@ -20,7 +20,7 @@ const PersonalizedAdvice: React.FC<PersonalizedAdviceProps> = ({ monthlyBudgetGo
   const [advice, setAdvice] = useState<AdviceResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [budgetGoal, setBudgetGoal] = useState<number>(monthlyBudgetGoal || 2000);
+  const [budgetGoal] = useState<number>(monthlyBudgetGoal || 2000);
 
   const fetchAdvice = async () => {
     setLoading(true);

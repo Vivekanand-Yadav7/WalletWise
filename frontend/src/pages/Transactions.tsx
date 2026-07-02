@@ -27,16 +27,6 @@ const Transactions: React.FC = () => {
       
       setTransactions(response.transactions);
       
-      // Calculate totals
-      const income = response.transactions
-        .filter(t => t.type === 'income')
-        .reduce((sum, t) => sum + t.amount, 0);
-      
-      const expenses = response.transactions
-        .filter(t => t.type === 'expense')
-        .reduce((sum, t) => sum + t.amount, 0);
-      
-
     } catch (err: any) {
       console.error('Error loading transactions:', err);
       setError('Failed to load transactions. Please try again.');
