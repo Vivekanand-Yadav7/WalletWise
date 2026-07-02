@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import InputField from '../components/InputField';
 import { authService } from '../services/authService';
-import { UserProfile as UserProfileType, PasswordChange, INCOME_TYPES } from '../types/user';
+import { INCOME_TYPES } from '../types/user';
 
 interface UserProfileData {
   name: string;

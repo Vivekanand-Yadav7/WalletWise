@@ -11,7 +11,7 @@ const Transactions: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [totals, setTotals] = useState({
+  const [_totals, setTotals] = useState({
     income: 0,
     expenses: 0,
     balance: 0

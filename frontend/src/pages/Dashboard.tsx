@@ -127,12 +127,6 @@ const Dashboard: React.FC = () => {
 
 
 
-  const handleAddTransaction = (type: 'income' | 'expense') => {
-    navigate('/add-transaction', { 
-      state: { initialType: type } 
-    });
-  };
-
   const getDateFilterLabel = () => {
     switch (dateFilter) {
       case 'today':
