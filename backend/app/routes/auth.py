@@ -68,7 +68,9 @@ def signup():
         
     except Exception as e:
         db.session.rollback()
-        return jsonify({'error': 'Internal server error'}), 500
+        import traceback
+        traceback.print_exc()
+        return jsonify({'error': f'Internal server error: {str(e)}'}), 500
 
 @auth_bp.route('/login', methods=['POST'])
 def login():
