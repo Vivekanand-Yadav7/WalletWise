@@ -216,28 +216,6 @@ const AddTransaction: React.FC = () => {
     }
   };
 
-  // Function to upload audio to server (for future enhancement)
-  const uploadAudioMemo = async () => {
-    if (!audioBlob) return null;
-    
-    // This would typically upload to your backend
-    // For now, we'll just return a placeholder
-    try {
-      // const formData = new FormData();
-      // formData.append('audio', audioBlob);
-      // const response = await fetch('/api/upload-audio', {
-      //   method: 'POST',
-      //   body: formData
-      // });
-      // return response.json();
-      
-      return { audioUrl: 'placeholder-audio-url' };
-    } catch (error) {
-      console.error('Error uploading audio:', error);
-      return null;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="max-w-2xl mx-auto px-4 py-8">

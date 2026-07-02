@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { aiService } from '../services/api';
 
 interface PersonalizedAdviceProps {
@@ -36,9 +36,7 @@ const PersonalizedAdvice: React.FC<PersonalizedAdviceProps> = ({ monthlyBudgetGo
     }
   };
 
-  const handleBudgetGoalChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setBudgetGoal(Number(e.target.value));
-  };
+
 
   const handleGetSuggestion = () => {
     fetchAdvice();

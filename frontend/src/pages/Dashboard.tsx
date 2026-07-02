@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Transaction } from '../types/transaction';
 import { dashboardService, DashboardSummary } from '../services/dashboardService';
 import { useAuth } from '../contexts/AuthContext';
@@ -13,7 +13,6 @@ interface DateRange {
 }
 
 const Dashboard: React.FC = () => {
-  const navigate = useNavigate();
   const { user } = useAuth();
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [summary, setSummary] = useState<DashboardSummary | null>(null);

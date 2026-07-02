@@ -11,11 +11,7 @@ const Transactions: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [_totals, setTotals] = useState({
-    income: 0,
-    expenses: 0,
-    balance: 0
-  });
+
 
   // Load transactions on component mount
   useEffect(() => {
@@ -40,12 +36,7 @@ const Transactions: React.FC = () => {
         .filter(t => t.type === 'expense')
         .reduce((sum, t) => sum + t.amount, 0);
       
-      setTotals({
-        income,
-        expenses,
-        balance: income - expenses
-      });
-      
+
     } catch (err: any) {
       console.error('Error loading transactions:', err);
       setError('Failed to load transactions. Please try again.');
